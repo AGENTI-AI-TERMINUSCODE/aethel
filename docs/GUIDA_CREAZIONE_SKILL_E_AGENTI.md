@@ -34,7 +34,9 @@ Un **Agente** è un'entità intelligente a cui viene assegnato un ruolo, un comp
 
 ### Esempio Pratico di Codice (Python)
 ```python
-def controllo_disponibilita_prodotto(codice_articolo: str, quantita: int) -> dict:
+def run(args: dict) -> dict:
+    codice_articolo = str(args.get("codice_articolo", ""))
+    quantita = int(args.get("quantita", 1))
     """
     Verifica se la quantità richiesta di un articolo è presente a magazzino.
     """

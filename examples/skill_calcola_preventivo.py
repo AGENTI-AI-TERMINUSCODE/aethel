@@ -1,12 +1,17 @@
 """
-Esempio di Skill Aethel in Python
+Esempio di Skill Aethel in Python (Runtime python_jit)
 Calcolo del preventivo con sconti dinamici e verifica di convenienza.
+La funzione principale deve essere definita come: def run(args):
 """
 
-def calcola_preventivo(importo_base: float, volume_articoli: int, cliente_premium: bool = False) -> dict:
+def run(args: dict) -> dict:
     """
-    Calcola l'importo scontato in base al volume di acquisto e allo status del cliente.
+    Riceve i parametri dal runtime di Aethel e calcola l'importo scontato.
     """
+    importo_base = float(args.get("importo_base", 0.0))
+    volume_articoli = int(args.get("volume_articoli", 1))
+    cliente_premium = bool(args.get("cliente_premium", False))
+
     sconto_volume = 0.0
     if volume_articoli >= 100:
         sconto_volume = 15.0
@@ -22,6 +27,7 @@ def calcola_preventivo(importo_base: float, volume_articoli: int, cliente_premiu
     totale_scontato = importo_base - valore_sconto
 
     return {
+        "status": "CALCOLO_COMPLETATO",
         "importo_base": importo_base,
         "volume_articoli": volume_articoli,
         "cliente_premium": cliente_premium,
@@ -31,5 +37,5 @@ def calcola_preventivo(importo_base: float, volume_articoli: int, cliente_premiu
     }
 
 if __name__ == "__main__":
-    risultato = calcola_preventivo(1250.00, 60, cliente_premium=True)
-    print("Risultato Test Preventivo:", risultato)
+    test_args = {"importo_base": 1250.0, "volume_articoli": 60, "cliente_premium": True}
+    print("Test Locale:", run(test_args))

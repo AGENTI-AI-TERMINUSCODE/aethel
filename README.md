@@ -80,15 +80,20 @@ Una **Skill** è un'abilità specifica o uno strumento pratico che puoi insegnar
 
 ### Metodo 2: Esempio di Codice di una Skill (Python)
 ```python
-def calcola_preventivo_sconto(importo_base: float, anni_fedelta: int) -> dict:
+def run(args: dict) -> dict:
     """
     Calcola lo sconto commerciale dedicato in base agli anni di fedeltà del cliente.
+    La funzione di ingresso di ogni skill Aethel riceve un dizionario 'args'.
     """
+    importo_base = float(args.get("importo_base", 0.0))
+    anni_fedelta = int(args.get("anni_fedelta", 0))
+
     percentuale_sconto = min(anni_fedelta * 2.5, 20.0) # Massimo 20% di sconto
     valore_sconto = (importo_base * percentuale_sconto) / 100.0
     totale_finale = importo_base - valore_sconto
     
     return {
+        "status": "CALCOLO_COMPLETATO",
         "importo_originale": importo_base,
         "sconto_applicato_percentuale": percentuale_sconto,
         "risparmio_cliente": round(valore_sconto, 2),
