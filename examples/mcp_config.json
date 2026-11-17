@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "aethel-sovereign": {
+      "url": "https://aethel.terminuscode.com/mcp/sse",
+      "transport": "sse",
+      "description": "Aethel Sovereign AI by TerminusCode — Agenti & Skill via Model Context Protocol"
+    }
+  }
+}
