@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Aethel Sovereign AI Sidebar",
+  "version": "1.0.0",
+  "description": "Assistente cognitivo sovrano sviluppato da TerminusCode — analisi pagine web, sintesi e Chat Studio laterale.",
+  "permissions": ["sidePanel", "activeTab", "scripting"],
+  "host_permissions": ["https://aethel.terminuscode.com/*"],
+  "action": {
+    "default_title": "Apri Aethel Sidebar"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

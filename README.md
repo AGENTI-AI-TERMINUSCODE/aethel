@@ -204,3 +204,14 @@ Approfondisci nell'**[Executive Brief per CTO & CISO](docs/CTO_EXECUTIVE_BRIEF.m
 © TerminusCode. Tutti i diritti riservati.
 
 </div>
+
+---
+
+## Ecosistema Developer v5.0 — SDK, OpenAPI 3.1, Estensione Browser & Suite Enterprise
+
+* **Specifica OpenAPI 3.1 Live**: `https://aethel.terminuscode.com/openapi.json`
+* **Status & SLA Live**: `https://aethel.terminuscode.com/api/v1/status/sla` (**42 settori** · **52+ lingue**)
+* **SDK Ufficiali**: [`sdk/python/aethel_sdk.py`](sdk/python/aethel_sdk.py) · [`sdk/typescript/aethel_sdk.ts`](sdk/typescript/aethel_sdk.ts)
+* **Estensione Browser Chrome/Edge (MV3)**: [`integrations/browser-extension/`](integrations/browser-extension/)
+* **Installer MCP 1-Click (VS Code / Cursor / Claude Desktop)**: [`integrations/ide-mcp/install_aethel_mcp.py`](integrations/ide-mcp/install_aethel_mcp.py)
+* **Capabilities Enterprise v5.0**: Export binari nativi (`.xlsx` ISO OpenXML con formule, `.docx`, Report PDF A4, Slide Deck 16:9), Data Analyst deterministico CSV/JSON, Sandbox codice isolata, Redline Diff contrattuale, Knowledge Base Privata (PDF/DOCX + RBAC), Deep Research citato, Agenti Schedulati, SSO (`SAML 2.0 / OIDC`), Zero-Data-Retention/BYOK e Audit Log esportabile SIEM/EU AI Act con sigillo SHA-256.

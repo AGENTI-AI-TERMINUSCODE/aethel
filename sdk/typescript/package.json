@@ -1,0 +1,7 @@
+{
+  "name": "@terminuscode/aethel-sdk",
+  "version": "5.0.0",
+  "description": "Official TypeScript SDK for Aethel Sovereign AI Platform by TerminusCode",
+  "main": "aethel_sdk.ts",
+  "license": "MIT"
+}
